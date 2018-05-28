@@ -1,21 +1,21 @@
 {
-  "name": "web",
+  "name": "fun-draw",
   "version": "1.0.0",
-  "description": "personal site",
+  "description": "",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moonishteapot/coleWeb.git"
+    "url": "git+https://github.com/moonishteapot/fun-draw.git"
   },
-  "author": "Cole",
+  "author": "Cole Vick",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/moonishteapot/coleWeb/issues"
+    "url": "https://github.com/moonishteapot/fun-draw/issues"
   },
-  "homepage": "https://github.com/moonishteapot/coleWeb#readme",
+  "homepage": "https://github.com/moonishteapot/fun-draw#readme",
   "dependencies": {
     "express": "^4.16.3",
     "paper": "^0.11.5"
