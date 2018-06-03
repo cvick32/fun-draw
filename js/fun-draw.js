@@ -6,6 +6,7 @@ var colors = colors1;
 var x = 1;
 var clicks = 1;
 var trail = [];
+var children = [];
 var sticky = false;
 var rects = false;
 // making x large and clicks small makes long rectangles that twirl around each other
@@ -24,7 +25,14 @@ function build() {
   }
 }
 
-build();
+function tearDown() {
+  for (var i = 0; i < amount; i++) {
+    trail[i].remove();
+  }
+  for (var i = 0; i < children.length; i++) {
+    children[i].remove();
+  }
+}
 
 function onMouseMove(event) {
   mousePoint = event.point;
@@ -50,6 +58,9 @@ function onKeyDown(event) {
       clicks = clicks - 1;
     case "r":
       rects = !rects;
+    case "q":
+      tearDown();
+      build();
     default:
       break;
   }
@@ -67,6 +78,9 @@ function onFrame(event) {
       var clone = item.clone();
       clone.scale(clicks);
       clone.fillColor = colors[i % 4];
+      children.push(clone);
     }
   }
 }
+
+build();
