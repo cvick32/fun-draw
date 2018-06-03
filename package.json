@@ -2,10 +2,10 @@
   "name": "fun-draw",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "node ./main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "main.js"
+    "start": "node ./main.js"
   },
   "repository": {
     "type": "git",
