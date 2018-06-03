@@ -1,9 +1,9 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var localPort = 8080;
 
 app.use(express.static(__dirname + "/css/"));
-app.use(express.static(__dirname + "/html/"));
 app.use(express.static(__dirname + "/node_modules/"));
 
 app.get('/', function(req, res) {
@@ -11,6 +11,6 @@ app.get('/', function(req, res) {
     console.log(__dirname);
 });
 
-app.listen(process.env.PORT || 5000), function(req, res) {
-  console.log("listening on 5000");
+app.listen(process.env.PORT || localPort, function(req, res) {
+  console.log("listening on " + localPort);
 });
