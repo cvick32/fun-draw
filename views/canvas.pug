@@ -1,7 +1,22 @@
 doctype html
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='shortcut icon', href='images/favicon.ico', type='image/x-icon')
+    title Fun-Draw
+    link(rel='stylesheet', type='text/css', href='stylesheets/canvas.css')
+    script(src='https://www.gstatic.com/firebasejs/5.0.4/firebase.js')
+    script.
+      // Initialize Firebase
+      var config = {
+      apiKey: "AIzaSyBnwzBIt94gUt7YbFt10c0NvFjcMsrsl7E",
+      authDomain: "fun-draw-55de8.firebaseapp.com",
+      databaseURL: "https://fun-draw-55de8.firebaseio.com",
+      projectId: "fun-draw-55de8",
+      storageBucket: "fun-draw-55de8.appspot.com",
+      messagingSenderId: "466246412186"
+      };
+      firebase.initializeApp(config);
+    script(type='text/javascript', src='javascripts/paper-full.min.js')
+    script(type='text/paperscript', canvas='myCanvas', src='javascripts/fun-draw.js')
   body
-    block content
+    canvas#myCanvas(resize='')
