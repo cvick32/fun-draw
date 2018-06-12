@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <title>Fun-Draw</title>
+    <link rel="stylesheet" type="text/css" href="canvas.css">
+    
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBnwzBIt94gUt7YbFt10c0NvFjcMsrsl7E",
+        authDomain: "fun-draw-55de8.firebaseapp.com",
+        databaseURL: "https://fun-draw-55de8.firebaseio.com",
+        projectId: "fun-draw-55de8",
+        storageBucket: "fun-draw-55de8.appspot.com",
+        messagingSenderId: "466246412186"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script type="text/javascript" src="/paper/dist/paper-full.min.js"></script>
+    <script type="text/paperscript" canvas="myCanvas" src="fun-draw.js"></script>
+
+  </head>
+  <body>
+  <canvas id="myCanvas" resize></canvas>
+  </body>
+</html>
