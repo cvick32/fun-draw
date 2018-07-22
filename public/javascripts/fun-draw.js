@@ -56,13 +56,17 @@ function onKeyDown(event) {
       break;
     case "-":
       clicks = clicks - 1;
+      break;
     case "r":
       rects = !rects;
+      break;
     case "q":
       tearDown();
       build();
+      break;
     case "s":
-      window.location.replace(window.location.href + "settings")
+      window.location.replace(window.location.href + "settings");
+      break;
     default:
       break;
   }
