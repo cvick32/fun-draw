@@ -25,6 +25,17 @@ function build() {
   }
 }
 
+function downloadSVG() {
+
+   fileName = "paperjs_example.svg"
+
+   var url = "data:image/svg+xml;utf8," + encodeURIComponent(papervi.project.exportSVG({asString:true}));
+
+   var link = document.createElement("a");
+   link.download = fileName;
+   link.href = url;
+   link.click();
+}
 function tearDown() {
   for (var i = 0; i < amount; i++) {
     trail[i].remove();
@@ -66,6 +77,9 @@ function onKeyDown(event) {
       break;
     case "s":
       window.location.replace(window.location.href + "settings");
+      break;
+    case "P":
+      downloadSVG();
       break;
     default:
       break;
