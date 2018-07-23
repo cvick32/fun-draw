@@ -29,7 +29,7 @@ function downloadSVG() {
 
    fileName = "paperjs_example.svg"
 
-   var url = "data:image/svg+xml;utf8," + encodeURIComponent(papervi.project.exportSVG({asString:true}));
+   var url = "data:image/svg+xml;utf8," + encodeURIComponent(paper.project.exportSVG({asString:true}));
 
    var link = document.createElement("a");
    link.download = fileName;
