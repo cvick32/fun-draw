@@ -78,7 +78,7 @@ function onKeyDown(event) {
     case "s":
       window.location.replace(window.location.href + "settings");
       break;
-    case "P":
+    case "p":
       downloadSVG();
       break;
     default:
