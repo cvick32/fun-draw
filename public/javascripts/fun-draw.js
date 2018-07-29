@@ -36,6 +36,7 @@ function downloadSVG() {
    link.href = url;
    link.click();
 }
+
 function tearDown() {
   for (var i = 0; i < amount; i++) {
     trail[i].remove();
